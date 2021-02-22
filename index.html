@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Data</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Lottery Calculator</h1>
+            <form>
+                <label for="gameId">Select Lottery</label>
+                <select name="gameId" id="gameId">
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="8">SuperLotto Plus</option>
+                    <option value="9">Daily 3</option>
+                    <option value="10">Fantasy 5</option>
+                    <option value="12">POWERBALL</option>
+                    <option value="14">Daily 4</option>
+                    <option value="15">MEGA Millions</option>
+                </select>
+            </form>
+        </nav>
+    </header>
+    <main class="content">
+        <div id="hide" hidden>
+            <div id="most-common">
+                <h1>Most Common Numbers</h1>
+                <h1 id="reg-numbers"></h1>
+                <br/>
+                <h1 id="special-title"></h1>
+                <h1 id="special-number"></h1>
+            </div>
+        </div>
+        <h2 id="calculating-message" hidden>Calculating Most Common Numbers</h2>
+        <table hidden>
+            <thead id="table-head">
+                <tr>
+                    <th>Draw Date</th>
+                    <th>Draw Number</th>
+                    <th>Winning Numbers</th>
+                    <th id="special">Special</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <h2 id="loading-message" hidden>Gathering Game Data</h2>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
